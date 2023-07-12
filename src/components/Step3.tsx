@@ -113,7 +113,7 @@ export default function Step3() {
             }}
             className={`${
               check3
-                ? "bg-slate-100 border-[1.3px] border-purple-900  "
+                ? "bg-slate-100 border-[1.3px] border-purple-900"
                 : "border-[1.3px] border-gray-300"
             } h-[80px] mt-4 flex items-center cursor-pointer  justify-center w-[480px] hover:border-[1.3px] hover:border-purple-900 rounded-md`}
           >

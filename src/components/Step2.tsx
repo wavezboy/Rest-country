@@ -154,7 +154,7 @@ export default function Step2() {
               </div>
             </div>
           </div>
-          <div className="h-[50px] flex items-center justify-center w-[480px] mt-6 rounded-sm gap-4 bg-gray-100">
+          <div className="h-[50px] flex items-center justify-center max-w-[480px] mt-6 rounded-sm gap-4 bg-gray-100">
             <p
               className={`${
                 click ? "text-gray-400" : "text-blue-950 font-semibold"
@@ -183,12 +183,9 @@ export default function Step2() {
               Yearly
             </h2>
           </div>
-          <div className="flex items-center mt-28 gap-72">
+          <div className="flex items-center mt-28 justify-between">
             <Link to="/">
-              <p
-                className="text-gray- hover:text-blue-800 cursor-pointer
-            "
-              >
+              <p className="text-gray- hover:text-blue-800 cursor-pointer">
                 Go Back
               </p>
             </Link>
