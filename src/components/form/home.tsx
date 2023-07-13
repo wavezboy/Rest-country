@@ -12,7 +12,6 @@ export default function Home() {
     useState<countryType[]>(countries);
 
   const [region, setRegion] = useState<string>("");
-  const [search, setSearch] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -42,12 +41,11 @@ export default function Home() {
     <div>
       <Header />
       <div className="flex justify-between">
-        <div className="h-[35px] flex items-center border mt-4 ml-6 bg-white shadow-md w-[500px]">
+        <div
+          className={`h-[40px] flex items-center border mt-4 ml-6 bg-white shadow-md rounded-md w-[400px]`}
+        >
           <div className="flex items-center w-full gap-2 ml-4">
-            <BsSearch
-              onClick={() => setSearch("lllll")}
-              className="text-[11px] text-gray-300"
-            />
+            <BsSearch className="text-[11px] text-gray-300" />
             <input
               type="search"
               onChange={handleChange}
