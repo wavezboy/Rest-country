@@ -7,9 +7,17 @@ type countryType = {
   capital: string;
   borders: string[];
   topLevelDomain: string[];
-  currencies: string;
-  languages: string;
+  currencies: CurrenciesType[];
+  languages: LanguageType[];
   flag: string;
+};
+
+type LanguageType = {
+  nativeName: string;
+};
+
+type CurrenciesType = {
+  name: string;
 };
 
 export default countryType;

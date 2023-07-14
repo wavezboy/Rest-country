@@ -38,12 +38,12 @@ export default function Home() {
   }, [region]);
 
   return (
-    <div>
-      <Header />
-      <div className="dark:bg-[#202d36]">
-        <div className="flex  justify-between">
+    <div className="relative">
+      <div className="fixed w-full">
+        <Header />
+        <div className="flex dark:bg-[#202d36] justify-between">
           <div
-            className={`h-[40px] dark:bg-[#2b3743]  flex items-center mt-4 ml-6  bg-[#ffff] shadow-md rounded-md w-[400px]`}
+            className={`h-[40px] px-2 dark:bg-[#2b3743]  flex items-center mt-4 ml-6  bg-[#ffff] shadow-md rounded-md w-[400px]`}
           >
             <div className="flex dark:bg-[#2b3743] items-center w-full gap-2 ml-4">
               <BsSearch className="text-[11px] dark:bg-[#2b3743]  dark:text-white text-gray-300" />
@@ -61,23 +61,52 @@ export default function Home() {
               onChange={(e) => {
                 setRegion(e.target.value);
               }}
-              className="text-[10px] h-[35px] dark:bg-[#2b3743] cursor-pointer  flex items-center justify-center bg-white shadow-md mt-4 mr-6 w-[100px] border"
+              className="text-[10px] block h-[35px] dark:bg-[#2b3743] cursor-pointer focus:border items-center justify-center bg-[#fff] dark:text-white p-2    shadow-lg mt-4 mr-6 w-[100px] "
               name="region"
               id="region"
             >
               <option value="" disabled selected hidden>
                 Filter by region
               </option>
-              <option value="All">All</option>
-              <option value="Africa">Africa</option>
-              <option value="Americas">Americas</option>
-              <option value="Asia">Asia</option>
-              <option value="Europe">Europe</option>
-              <option value="Oceania">Oceania</option>
+              <option className="dark:text-white dark:bg-[#202d36]" value="All">
+                All
+              </option>
+              <option
+                className="dark:text-white dark:bg-[#202d36]"
+                value="Africa"
+              >
+                Africa
+              </option>
+              <option
+                className="dark:text-white dark:bg-[#202d36]"
+                value="Americas"
+              >
+                Americas
+              </option>
+              <option
+                className="dark:text-white dark:bg-[#202d36]"
+                value="Asia"
+              >
+                Asia
+              </option>
+              <option
+                className="dark:text-white dark:bg-[#202d36]"
+                value="Europe"
+              >
+                Europe
+              </option>
+              <option
+                className="dark:text-white dark:bg-[#202d36]"
+                value="Oceania"
+              >
+                Oceania
+              </option>
             </select>
           </div>
         </div>
-        <div className="flex flex-wrap ml-16 mt-3 gap-5">
+      </div>
+      <div className="dark:bg-[#202d36] h-full pt-48">
+        <div className="flex flex-wrap ml-16 pb-60 gap-5">
           {availableCountries.map((country, i) => (
             <Country country={country} />
           ))}
