@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <div
-      className={`h-[70px] w-full flex items-center shadow-md border-b-2 bg-gray-100 border-gray-100 dark:bg-[#202d36] dark:border-[#202d36]`}
+      className={`h-[70px] w-full flex items-center shadow-md border-b-2 bg-gray-100 border-gray-100 dark:bg-[#2b3743] dark:shadow-md dark:border-[#202d36]`}
     >
       <div className="font-bold flex justify-between w-full px-5">
         <div>

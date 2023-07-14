@@ -40,28 +40,28 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="flex justify-between">
-        <div
-          className={`h-[40px] flex items-center border mt-4 ml-6 bg-white shadow-md rounded-md w-[400px]`}
-        >
-          <div className="flex items-center w-full gap-2 ml-4">
-            <BsSearch className="text-[11px] text-gray-300" />
-            <input
-              type="search"
-              onChange={handleChange}
-              placeholder="search for a country...."
-              className="text-[11px] outline-none w-full text-gray-400"
-            />
+      <div className="dark:bg-[#202d36]">
+        <div className="flex  justify-between">
+          <div
+            className={`h-[40px] dark:bg-[#2b3743]  flex items-center mt-4 ml-6  bg-[#ffff] shadow-md rounded-md w-[400px]`}
+          >
+            <div className="flex dark:bg-[#2b3743] items-center w-full gap-2 ml-4">
+              <BsSearch className="text-[11px] dark:bg-[#2b3743]  dark:text-white text-gray-300" />
+              <input
+                type="search"
+                onChange={handleChange}
+                placeholder="search for a country...."
+                className="text-[11px] dark:placeholder:text-white bg-transparent outline-none w-full text-gray-400"
+              />
+            </div>
           </div>
-        </div>
-        <div className="h-[35px] flex items-center justify-center bg-white shadow-md mt-4 mr-6 w-[100px] border">
-          <div className="">
+          <div>
             <select
               value={region}
               onChange={(e) => {
                 setRegion(e.target.value);
               }}
-              className="text-[10px]"
+              className="text-[10px] h-[35px] dark:bg-[#2b3743] cursor-pointer  flex items-center justify-center bg-white shadow-md mt-4 mr-6 w-[100px] border"
               name="region"
               id="region"
             >
@@ -77,11 +77,11 @@ export default function Home() {
             </select>
           </div>
         </div>
-      </div>
-      <div className="flex flex-wrap ml-16 mt-3 gap-5">
-        {availableCountries.map((country, i) => (
-          <Country country={country} />
-        ))}
+        <div className="flex flex-wrap ml-16 mt-3 gap-5">
+          {availableCountries.map((country, i) => (
+            <Country country={country} />
+          ))}
+        </div>
       </div>
     </div>
   );
