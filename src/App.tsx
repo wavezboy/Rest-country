@@ -11,8 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes></Routes>
 
-      {/* <Home /> */}
-      <ClickedCountry />
+      <Home />
+      {/* <ClickedCountry /> */}
 
       <div className="text-[400px]"></div>
     </BrowserRouter>

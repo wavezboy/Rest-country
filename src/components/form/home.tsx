@@ -105,7 +105,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="dark:bg-[#202d36] h-full pt-48">
+      <div className="dark:bg-[#202d36] min-h-screen pt-48">
         <div className="flex flex-wrap ml-16 pb-60 gap-5">
           {availableCountries.map((country, i) => (
             <Country country={country} />
